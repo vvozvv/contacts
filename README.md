@@ -1,23 +1,11 @@
-# book
+# Книга контактов
 
+![preview](/public/preview.png "Превью приложения")
+
+[Link to the app](https://app.netlify.com/sites/boring-yonath-5a9bad/settings/deploys)
 ## Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### Customize configuration
