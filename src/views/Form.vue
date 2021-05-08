@@ -12,7 +12,6 @@
               <input
                 type="text"
                 class="form__input"
-                :class="{ error: name.error }"
                 v-model="name"
                 placeholder="Имя контакта"
               />
@@ -129,7 +128,9 @@ export default {
   },
   mounted() {
     this.date = new Date().toLocaleDateString();
-    const item = this.$store.getters.contactFindById(this.$route.params.id);
+    let item = this.$store.getters.contactFindById(this.$route.params.id);
+    item = item ? JSON.parse(JSON.stringify(item)) : '';
+    console.log(item);
     if (item) {
       this.name = item.name;
       this.fields = item.fields;

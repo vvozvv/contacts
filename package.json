@@ -46,7 +46,7 @@
     "rules": {}
   },
   "prettier": {
-    "endOfLine":"auto"
+    "endOfLine": "auto"
   },
   "browserslist": [
     "> 1%",

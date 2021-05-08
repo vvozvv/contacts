@@ -14,11 +14,12 @@ export default createStore({
     },
     UPDATE_CONTACT: (state, payload) => {
       // Копируем массив
-      let cloneContacts = state.contact.concat();
-      // Ищем текущий индекс контпетп
+      let cloneContacts = JSON.parse(JSON.stringify(state.contact));
+      // Ищем текущий индекс контакт
       let index = cloneContacts.findIndex((item) => item.id === payload.id);
       // Возвращаем контакт
-      let contact = cloneContacts[index];
+      let contact = JSON.parse(JSON.stringify(cloneContacts[index]));
+      delete contact["archive"]
       // Меняем значение на новый контакт, в архив помещаем прошлую версию
       cloneContacts[index] = { ...payload, archive: contact };
       // Меняем значения
@@ -52,6 +53,6 @@ export default createStore({
   },
   getters: {
     contactsList: (state) => state.contact,
-    contactFindById: (state) => (id) => state.contact.find(item => item.id == id),
+    contactFindById: (state) => (id) => state.contact.find((item) => item.id == id),
   },
 });
