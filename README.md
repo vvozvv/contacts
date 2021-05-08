@@ -2,7 +2,7 @@
 
 ![preview](/public/preview.png "Превью приложения")
 
-[Link to the app](https://app.netlify.com/sites/boring-yonath-5a9bad/settings/deploys)
+[Link to the app](https://boring-yonath-5a9bad.netlify.app/)
 ## Project setup
 ```
 npm install
